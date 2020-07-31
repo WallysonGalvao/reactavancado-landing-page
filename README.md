@@ -71,6 +71,18 @@ $ yarn develop
 # Será disponibilizado o endereço: http://localhost:1337/
 ```
 
+### Database
+
+Esse projeto foi configurado com o banco PostgresSQL, dentro da pasta **reactavancado-landing-page/backend** há um arquivo **strapi.sql**, é um script/dump, utilze ele para popular o banco de dados. Abaixo alguns possiveis comandos:
+
+```bash
+# Caso tenha uma imagem em docker com o PostgresSQL
+$ docker exec -i <postgres_container_name> psql -U <database_user_name> -d <database_name> < strapi.sql
+
+# Caso tenha instaldo o PostgresSQL diretamente na máquina
+$ psql -h 127.0.0.1 -U <database_user_name> -d <database_name> -W < strapi.sql
+```
+
 ### Frontend
 
 ```bash
